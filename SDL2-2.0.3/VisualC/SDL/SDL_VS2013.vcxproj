@@ -140,6 +140,7 @@
     <Lib>
       <AdditionalDependencies>Winmm.lib;Version.lib;Imm32.lib</AdditionalDependencies>
       <IgnoreSpecificDefaultLibraries>libc.lib;libcd.lib; msvcrt.lib;msvcrtd.lib;libcmtd.lib; libcmtd.lib</IgnoreSpecificDefaultLibraries>
+      <TargetMachine>MachineX86</TargetMachine>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

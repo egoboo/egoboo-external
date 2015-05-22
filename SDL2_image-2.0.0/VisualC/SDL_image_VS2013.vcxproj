@@ -465,6 +465,11 @@
   <ItemGroup>
     <ClInclude Include="..\SDL_image.h" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\SDL2_mixer-2.0.0\VisualC\timidity\timidity_VS2013.vcxproj">
+      <Project>{647cf537-a2ff-4b10-856f-82a350fadd7f}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
