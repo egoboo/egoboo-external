@@ -30,3 +30,11 @@ Release/
 !SDL_mixer-1.2.12/VisualC/external/lib/x64/*
 !SDL_image-1.2.12/VisualC/external/lib/x86/*
 !SDL_image-1.2.12/VisualC/external/lib/x64/*
+
+# OS X.
+.DS_Store
+
+# Xcode
+xcuserdata
+*.xcuserstate
+*.xccheckout
