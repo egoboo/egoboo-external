@@ -158,8 +158,6 @@
 				BE48FD6407AFA17000BB41DA /* Rez */,
 				AA9EE79714B2C55E008773C0 /* Copy Fframeworks */,
 				AA9EE79B14B2C59B008773C0 /* Create Frameworks symlink */,
-				AA9EE79C14B2C5D0008773C0 /* Convert SDL includes to SDL Framework includes */,
-				AA5C3FE017A8CBCF00D6C8A1 /* Sign Frameworks */,
 			);
 			buildRules = (
 			);
@@ -218,20 +216,6 @@
 /* End PBXRezBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		AA5C3FE017A8CBCF00D6C8A1 /* Sign Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Sign Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if [ \"$USER\" = \"slouken\" ]; then\n    CODE_SIGN_IDENTITY=\"Mac Developer: Sam Lantinga (84TP7N5TA4)\" pkg-support/codesign-frameworks.sh || exit 1\nfi";
-		};
 		AA9EE79B14B2C59B008773C0 /* Create Frameworks symlink */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -245,20 +229,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "cd $SYMROOT/$CONFIGURATION/$FULL_PRODUCT_NAME\nif ! [ -L Frameworks ]; then\n    rm -f Frameworks\n    ln -s Versions/Current/Frameworks Frameworks\nfi";
-		};
-		AA9EE79C14B2C5D0008773C0 /* Convert SDL includes to SDL Framework includes */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Convert SDL includes to SDL Framework includes";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "cd $SYMROOT/$CONFIGURATION/$PUBLIC_HEADERS_FOLDER_PATH\nHEADER=SDL_ttf.h\nsed 's,#include \"\\(.*\\)\",#include <SDL2/\\1>,' <$HEADER >$HEADER.new\nmv $HEADER.new $HEADER";
 		};
 /* End PBXShellScriptBuildPhase section */
 
