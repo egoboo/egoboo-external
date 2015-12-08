@@ -386,10 +386,10 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="native_midi\native_midi_VS2013.vcxproj">
+    <ProjectReference Include="native_midi\native_midi.vcxproj">
       <Project>{1046ad56-292d-4c36-bded-b1941cf8acfa}</Project>
     </ProjectReference>
-    <ProjectReference Include="timidity\timidity_VS2013.vcxproj">
+    <ProjectReference Include="timidity\timidity.vcxproj">
       <Project>{647cf537-a2ff-4b10-856f-82a350fadd7f}</Project>
     </ProjectReference>
   </ItemGroup>
